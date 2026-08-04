@@ -55,7 +55,10 @@ public class DriverUtility {
 	            WebDriverManager.firefoxdriver().setup();
 
 	            FirefoxOptions options = new FirefoxOptions();
-	            driver = new FirefoxDriver(options);
+	            options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+	            options.addArguments("--headless");
+	          driver = new FirefoxDriver(options);
+
 
 	        } else {
 	            throw new IllegalArgumentException("Invalid browser: " + browser);
