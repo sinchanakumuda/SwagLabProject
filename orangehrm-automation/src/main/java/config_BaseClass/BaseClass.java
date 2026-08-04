@@ -10,6 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import POMClasses.CheckoutComplete;
@@ -27,7 +28,8 @@ public class BaseClass {
 	//Launching the browser for cross browser testing
 	@Parameters("browser")
 	@BeforeClass()
-	public void beforClassLaunchB(String browser) throws IOException
+	public void beforClassLaunchB(@Optional("chrome") String browser) throws IOException
+	
 	{
 		Reporter.log("Launch Browser -> beforemethod",true);
 		//String browser=p.readDataFromPropertyFile("browser");
