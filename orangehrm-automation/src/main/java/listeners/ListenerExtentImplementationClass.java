@@ -53,13 +53,18 @@ import config_BaseClass.BaseClass;;
 		}
 		
 		
-		public void onTestStart(ITestResult result) { 
-			
-			 String browser = result.getTestContext().getCurrentXmlTest().getParameter("browser");
-			    String testName = result.getMethod().getMethodName() + " [" + browser + "]";
-			    test=report.createTest(testName);
-		test.log(Status.INFO,"====="+testName+" Execution STARTED====="); 
+	
+		
+		public void onTestStart(ITestResult result) {
+		    String browser = result.getTestContext().getCurrentXmlTest().getParameter("browser");
+		    if (browser == null || browser.trim().isEmpty()) {
+		        browser = "DefaultBrowser"; // or "chrome"
+		    }
+		    String testName = result.getMethod().getMethodName() + " [" + browser + "]";
+		    test = report.createTest(testName);
+		    test.log(Status.INFO, "=====" + testName + " Execution STARTED=====");
 		}
+
 		
 	 
 		 public void onTestSuccess(ITestResult result) { 	
