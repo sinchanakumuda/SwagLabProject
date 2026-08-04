@@ -21,7 +21,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'cd orangehrm-automation && mvn test -DsuiteXmlFile=./crossBrowser.xml'
+                bat 'cd orangehrm-automation && mvn test -DsuiteXmlFile=src/test/resources/crossBrowser.xml'
             }
         }
 
