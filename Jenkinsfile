@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'M2-HOME'   // Make sure Jenkins has Maven installed and named like this
-        jdk 'JAVA_HOME'   // Adjust to the JDK you configured in Jenkins
+        maven 'M2-HOME'   // Adjust to your Maven installation name in Jenkins
+        jdk 'JAVA_HOME'   // Adjust to your JDK installation name in Jenkins
     }
 
     stages {
@@ -31,22 +31,26 @@ pipeline {
             }
         }
 
-        stage('Report') {
+        stage('Archive Reports & Screenshots') {
             steps {
                 archiveArtifacts artifacts: 'test-output/**', fingerprint: true
+                archiveArtifacts artifacts: 'Screenshots/**', fingerprint: true
             }
         }
 
         stage('Publish ExtentReport') {
             steps {
                 publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
                     reportDir: 'AdvanceReports',
                     reportFiles: 'Extentreport_*.html',
                     reportName: 'Extent Report'
                 ])
             }
         }
-    } // <-- closes stages
+    }
 
     post {
         success {
@@ -56,4 +60,4 @@ pipeline {
             echo '❌ Build failed. Check logs and reports.'
         }
     }
-} // <-- closes pipeline
+}
