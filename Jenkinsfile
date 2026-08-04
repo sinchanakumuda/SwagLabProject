@@ -36,6 +36,15 @@ pipeline {
                 archiveArtifacts artifacts: 'test-output/**', fingerprint: true
             }
         }
+        
+        stage('Publish ExtentReport') {
+    steps {
+        publishHTML([
+            reportDir: 'AdvanceReports',
+            reportFiles: 'Extentreport_*.html',
+            reportName: 'Extent Report'
+        ])
+    }
     }
 
     post {
