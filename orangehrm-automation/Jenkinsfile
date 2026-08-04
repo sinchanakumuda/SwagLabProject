@@ -1,10 +1,10 @@
 pipeline {
     agent any
     
-   tools {
-    maven 'M2-HOME'
-    jdk 'JAVA_HOME'
-}
+    tools {
+        maven 'M2-HOME'
+        jdk 'JAVA_HOME'
+    }
 
     stages {
         stage('Checkout') {
@@ -15,20 +15,20 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                bat 'cd orangehrm-automation && mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test -DsuiteXmlFile=crossBrowser.xml'
+                bat 'cd orangehrm-automation && mvn test -DsuiteXmlFile=crossBrowser.xml'
             }
         }
 
         stage('Publish Report') {
             steps {
                 publishHTML(target: [
-                    reportDir: 'AdvanceReports',
+                    reportDir: 'orangehrm-automation/AdvanceReports',
                     reportFiles: 'Extentreport*.html',
                     reportName: 'Extent Report'
                 ])
@@ -38,7 +38,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: 'AdvanceReports/*.html', fingerprint: true
+            archiveArtifacts artifacts: 'orangehrm-automation/AdvanceReports/*.html', fingerprint: true
         }
         success {
             echo 'Pipeline executed successfully!'
