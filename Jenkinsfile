@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'M2-HOME'   // Make sure Jenkins has Maven installed and named like this
-        jdk 'JAVA_HOME'        // Adjust to the JDK you configured in Jenkins
+        jdk 'JAVA_HOME'   // Adjust to the JDK you configured in Jenkins
     }
 
     stages {
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                bat 'mvn test -P crossBrowser'
             }
             post {
                 always {
@@ -36,16 +36,17 @@ pipeline {
                 archiveArtifacts artifacts: 'test-output/**', fingerprint: true
             }
         }
-        
+
         stage('Publish ExtentReport') {
-    steps {
-        publishHTML([
-            reportDir: 'AdvanceReports',
-            reportFiles: 'Extentreport_*.html',
-            reportName: 'Extent Report'
-        ])
-    }
-    }
+            steps {
+                publishHTML([
+                    reportDir: 'AdvanceReports',
+                    reportFiles: 'Extentreport_*.html',
+                    reportName: 'Extent Report'
+                ])
+            }
+        }
+    } // <-- closes stages
 
     post {
         success {
@@ -55,4 +56,4 @@ pipeline {
             echo '❌ Build failed. Check logs and reports.'
         }
     }
-}
+} // <-- closes pipeline
