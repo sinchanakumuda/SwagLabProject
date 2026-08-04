@@ -25,7 +25,7 @@ public class BaseClass {
 	PropertyFileUtility p=new PropertyFileUtility();
 	
 	//Launching the browser for cross browser testing
-	@Parameters("browser")
+	/*@Parameters("browser")
 	@BeforeClass()
 	public void beforClassLaunchB(String browser) throws IOException
 	{
@@ -40,8 +40,8 @@ public class BaseClass {
 		 sdriver=driver;
 		 System.out.println("launching browser");
 		 
-	}
-	/*
+	}*/
+	
 	@BeforeClass()
 	public void beforClassLaunchB() throws IOException
 	{
@@ -56,7 +56,7 @@ public class BaseClass {
 		 sdriver=driver;
 		 System.out.println("launching browser");
 		 
-	}*/
+	}
 	
 	
 	//Method using Command line parameter
