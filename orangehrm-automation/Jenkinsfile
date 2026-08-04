@@ -19,11 +19,12 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                bat 'cd orangehrm-automation && mvn test -DsuiteXmlFile=src/test/resources/crossBrowser.xml'
-            }
-        }
+     stage('Test') {
+    steps {
+        bat 'cd orangehrm-automation && mvn test'
+    }
+}
+
 
         stage('Publish Report') {
             steps {
