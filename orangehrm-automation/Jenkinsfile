@@ -1,10 +1,10 @@
 pipeline {
     agent any
     
-    tools {
-        maven 'Maven_3.9'   // Configure Maven in Jenkins global tools
-        jdk 'JDK_17'        // Configure JDK in Jenkins global tools
-    }
+   tools {
+    maven 'M2-HOME'
+    jdk 'JAVA_HOME'
+}
 
     stages {
         stage('Checkout') {
