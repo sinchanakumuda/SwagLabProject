@@ -79,7 +79,9 @@
     </plugins>
   </build>
 
-  <profiles>
+  <!-- 
+  This plugin is disabled for now when we need profiling will uncomment it
+   <profiles>
     <profile>
       <id>BT</id>
       <build>
@@ -98,10 +100,19 @@
         </plugins>
       </build>
     </profile>
-  </profiles>
+  </profiles>-->
 
 
-
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.5.4</version>
+  <configuration>
+    <suiteXmlFiles>
+      <suiteXmlFile>src/test/resources/crossBrowser.xml</suiteXmlFile>
+    </suiteXmlFiles>
+  </configuration>
+</plugin>
 
  
  </project>
