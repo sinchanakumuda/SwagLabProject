@@ -26,12 +26,12 @@
       <![CDATA[Close Browser -> beforemethod]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-08-03T16:35:25 IST" name="Suite" finished-at="2026-08-03T16:35:35 IST" duration-ms="10247">
+  <suite started-at="2026-08-04T13:57:22 IST" name="Suite" finished-at="2026-08-04T13:57:56 IST" duration-ms="33480">
     <groups>
     </groups>
-    <test started-at="2026-08-03T16:35:25 IST" name="Chrome" finished-at="2026-08-03T16:35:34 IST" duration-ms="8978">
+    <test started-at="2026-08-04T13:57:22 IST" name="Chrome" finished-at="2026-08-04T13:57:55 IST" duration-ms="32752">
       <class name="swagLabs_framework.SwagLabBaseClassInhertingTest">
-        <test-method is-config="true" signature="beforClassLaunchB(java.lang.String)[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1283bb96]" started-at="2026-08-03T16:35:25 IST" name="beforClassLaunchB" finished-at="2026-08-03T16:35:27 IST" duration-ms="1801" status="PASS">
+        <test-method is-config="true" signature="beforClassLaunchB(java.lang.String)[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@4d5d943d]" started-at="2026-08-04T13:57:22 IST" name="beforClassLaunchB" finished-at="2026-08-04T13:57:49 IST" duration-ms="26198" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,22 +45,22 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforClassLaunchB -->
-        <test-method is-config="true" signature="beforeMethodLoginApp()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1283bb96]" started-at="2026-08-03T16:35:27 IST" name="beforeMethodLoginApp" finished-at="2026-08-03T16:35:28 IST" duration-ms="1312" status="PASS">
+        <test-method is-config="true" signature="beforeMethodLoginApp()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@4d5d943d]" started-at="2026-08-04T13:57:49 IST" name="beforeMethodLoginApp" finished-at="2026-08-04T13:57:50 IST" duration-ms="1159" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[login to app -> beforemethod]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeMethodLoginApp -->
-        <test-method signature="swagLabTest()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1283bb96]" started-at="2026-08-03T16:35:28 IST" name="swagLabTest" finished-at="2026-08-03T16:35:33 IST" duration-ms="4755" status="PASS">
+        <test-method signature="swagLabTest()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@4d5d943d]" started-at="2026-08-04T13:57:50 IST" name="swagLabTest" finished-at="2026-08-04T13:57:54 IST" duration-ms="4299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- swagLabTest -->
-        <test-method is-config="true" signature="afterMethodLogoutApp()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1283bb96]" started-at="2026-08-03T16:35:33 IST" name="afterMethodLogoutApp" finished-at="2026-08-03T16:35:34 IST" duration-ms="813" status="PASS">
+        <test-method is-config="true" signature="afterMethodLogoutApp()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@4d5d943d]" started-at="2026-08-04T13:57:54 IST" name="afterMethodLogoutApp" finished-at="2026-08-04T13:57:55 IST" duration-ms="745" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodLogoutApp -->
-        <test-method is-config="true" signature="afterClassCloseB()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1283bb96]" started-at="2026-08-03T16:35:34 IST" name="afterClassCloseB" finished-at="2026-08-03T16:35:34 IST" duration-ms="233" status="PASS">
+        <test-method is-config="true" signature="afterClassCloseB()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@4d5d943d]" started-at="2026-08-04T13:57:55 IST" name="afterClassCloseB" finished-at="2026-08-04T13:57:55 IST" duration-ms="270" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Close Browser -> beforemethod]]>
@@ -69,9 +69,9 @@
         </test-method> <!-- afterClassCloseB -->
       </class> <!-- swagLabs_framework.SwagLabBaseClassInhertingTest -->
     </test> <!-- Chrome -->
-    <test started-at="2026-08-03T16:35:25 IST" name="FireFox" finished-at="2026-08-03T16:35:35 IST" duration-ms="10247">
+    <test started-at="2026-08-04T13:57:22 IST" name="FireFox" finished-at="2026-08-04T13:57:56 IST" duration-ms="33480">
       <class name="swagLabs_framework.SwagLabBaseClassInhertingTest">
-        <test-method is-config="true" signature="beforClassLaunchB(java.lang.String)[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@9f116cc]" started-at="2026-08-03T16:35:25 IST" name="beforClassLaunchB" finished-at="2026-08-03T16:35:31 IST" duration-ms="5738" status="PASS">
+        <test-method is-config="true" signature="beforClassLaunchB(java.lang.String)[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1189dd52]" started-at="2026-08-04T13:57:22 IST" name="beforClassLaunchB" finished-at="2026-08-04T13:57:52 IST" duration-ms="29392" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,22 +85,22 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforClassLaunchB -->
-        <test-method is-config="true" signature="beforeMethodLoginApp()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@9f116cc]" started-at="2026-08-03T16:35:31 IST" name="beforeMethodLoginApp" finished-at="2026-08-03T16:35:33 IST" duration-ms="2036" status="PASS">
+        <test-method is-config="true" signature="beforeMethodLoginApp()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1189dd52]" started-at="2026-08-04T13:57:52 IST" name="beforeMethodLoginApp" finished-at="2026-08-04T13:57:53 IST" duration-ms="1718" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[login to app -> beforemethod]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeMethodLoginApp -->
-        <test-method signature="swagLabTest()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@9f116cc]" started-at="2026-08-03T16:35:33 IST" name="swagLabTest" finished-at="2026-08-03T16:35:34 IST" duration-ms="1515" status="PASS">
+        <test-method signature="swagLabTest()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1189dd52]" started-at="2026-08-04T13:57:53 IST" name="swagLabTest" finished-at="2026-08-04T13:57:55 IST" duration-ms="1445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- swagLabTest -->
-        <test-method is-config="true" signature="afterMethodLogoutApp()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@9f116cc]" started-at="2026-08-03T16:35:34 IST" name="afterMethodLogoutApp" finished-at="2026-08-03T16:35:34 IST" duration-ms="135" status="PASS">
+        <test-method is-config="true" signature="afterMethodLogoutApp()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1189dd52]" started-at="2026-08-04T13:57:55 IST" name="afterMethodLogoutApp" finished-at="2026-08-04T13:57:55 IST" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodLogoutApp -->
-        <test-method is-config="true" signature="afterClassCloseB()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@9f116cc]" started-at="2026-08-03T16:35:34 IST" name="afterClassCloseB" finished-at="2026-08-03T16:35:35 IST" duration-ms="778" status="PASS">
+        <test-method is-config="true" signature="afterClassCloseB()[pri:0, instance:swagLabs_framework.SwagLabBaseClassInhertingTest@1189dd52]" started-at="2026-08-04T13:57:55 IST" name="afterClassCloseB" finished-at="2026-08-04T13:57:56 IST" duration-ms="728" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Close Browser -> beforemethod]]>
