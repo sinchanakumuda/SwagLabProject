@@ -2,8 +2,10 @@ package config_BaseClass;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -105,6 +107,8 @@ public class BaseClass {
 			DriverUtility.explictWaitForVisiblity(driver, userField, username);
 			DriverUtility.explictWaitForVisiblity(driver, passField, password);
 			DriverUtility.explictWaitForElementClick(driver, loginBtn);	
+			
+			
 			System.out.println("login Done");
 	}
 	

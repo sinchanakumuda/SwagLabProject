@@ -56,7 +56,14 @@ import config_BaseClass.BaseClass;;
 		public void onTestStart(ITestResult result) { 
 			
 			 String browser = result.getTestContext().getCurrentXmlTest().getParameter("browser");
-			    String testName = result.getMethod().getMethodName() + " [" + browser + "]";
+			
+			 if(browser==null)
+			 {
+				 browser="chrome";
+			 }
+			
+			  String  testName = result.getMethod().getMethodName() + " [" + browser + "]";
+			 
 			    test=report.createTest(testName);
 		test.log(Status.INFO,"====="+testName+" Execution STARTED====="); 
 		}
@@ -75,13 +82,18 @@ import config_BaseClass.BaseClass;;
 			    Date d = new Date();
 			    String newDate = d.toString().replace(" ", "_").replace(":", "_");
 
+			    // Capture screenshot in Base64
 			    TakesScreenshot ts = (TakesScreenshot) BaseClass.sdriver;
 			    String src = ts.getScreenshotAs(OutputType.BASE64);
-                test.addScreenCaptureFromBase64String(src,testName+"Failure"+newDate);
-			  
-			    
-			    test.log(Status.FAIL,"======"+testName+" FAILURE======");
-			    
+			    test.addScreenCaptureFromBase64String(src, testName + "Failure" + newDate);
+
+			    // Log failure status
+			    test.log(Status.FAIL, "======" + testName + " FAILURE ======");
+
+			    // Log assertion/exception message
+			    if (result.getThrowable() != null) {
+			        test.log(Status.FAIL, result.getThrowable().getMessage());
+			    }
 			}
 		 
 		 public void onTestSkipped(ITestResult result)

@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 
 
 
-public class OrangeHrm_HardCoding {
+public class SwagLab_HardCoding {
 	
 	public static void main(String args[]) throws InterruptedException
 	{

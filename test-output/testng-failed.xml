@@ -6,8 +6,8 @@
       <class name="swagLabs_framework.SwagLabAssertionBaseClassInhertingforTest">
         <methods>
           <include name="afterMethodLogoutApp"/>
-          <include name="beforeMethodLoginApp"/>
           <include name="swagLabTest"/>
+          <include name="beforeMethodLoginApp"/>
           <include name="afterClassCloseB"/>
           <include name="beforClassLaunchB"/>
         </methods>
